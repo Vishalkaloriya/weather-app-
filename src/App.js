@@ -19,11 +19,11 @@ const App = () => {
   const fetchWeatherData = async (city) => {
     try {
       const currentWeatherResponse = await axios.get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`
       );
 
       const forecastResponse = await axios.get(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${unit}`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${unit}`
       );
 
       setWeatherData(currentWeatherResponse.data);

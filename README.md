@@ -1,7 +1,7 @@
 # Project Title
 
 WEATHER APP
-
+(https://vishalkaloriya.github.io/weather-app-/)
 ## Screenshots
 
 ![Screenshot 1](https://res.cloudinary.com/dazcvmikr/image/upload/v1705742340/Screenshot_2024-01-20_144640_a9lsti.png)
@@ -18,6 +18,6 @@ WEATHER APP
 
 To run in your device follow these steps
 
-### `git clone` 
+### `git clone https://github.com/Vishalkaloriya/weather-app-.git` 
 ### `npm install`
 ### `npm start`

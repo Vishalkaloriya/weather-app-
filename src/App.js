@@ -10,7 +10,7 @@ const App = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [forecastData, setForecastData] = useState(null);
   const [showForecast, setShowForecast] = useState(false);
-  const [showPreviousDays, setShowPreviousDays] = useState(false);
+  const [shownext5days, setshownext5days] = useState(false);
   const [error, setError] = useState(null);
   const [unit, setUnit] = useState('metric'); 
 
@@ -40,10 +40,10 @@ const App = () => {
   };
   const handleBackToSearch = () => {
     setShowForecast(false);
-    setShowPreviousDays(false);
+    setshownext5days(false);
   };
-  const handleShowPreviousDays = () => {
-    setShowPreviousDays(true);
+  const handleshownext5days = () => {
+    setshownext5days(true);
   };
   const toggleUnit = () => {
     setUnit(unit === 'metric' ? 'imperial' : 'metric');
@@ -70,10 +70,10 @@ const App = () => {
 
     {showForecast && forecastData && (
        <div>
-       <button onClick={handleShowPreviousDays}>
+       <button onClick={handleshownext5days}>
        Show 5 Next Days
        </button>
-       {showPreviousDays ? <Forecast forecastData={forecastData} unit={unit} onBackToSearch={handleBackToSearch} /> : null}
+       {shownext5days ? <Forecast forecastData={forecastData} unit={unit} onBackToSearch={handleBackToSearch} /> : null}
      </div>
     )}
   </div>
